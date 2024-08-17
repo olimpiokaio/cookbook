@@ -2,9 +2,12 @@ import { Injectable } from "@angular/core";
 import { Recipe } from "./recipe.model";
 import { Ingredient } from "../shared/ingredient.model";
 import { ShoppingListService } from "../shopping-list/shopping-list.service";
+import { Subject } from "rxjs";
 
 @Injectable()
 export class RecipeService {
+
+  recipesChanged = new Subject<Recipe[]>();
 
   private recipes: Recipe[] = [
     new Recipe(
@@ -14,13 +17,12 @@ export class RecipeService {
       [new Ingredient('Shrimp', 20), new Ingredient('Vegetable', 4)]
     ),
     new Recipe(
-      'Hamburguer',
+      'Torta de limao',
       'This is simply a test',
-      'https://www.incrivel.com/_next/image/?url=https%3A%2F%2Fincrivel-prd.adtsys.com.br%2Fwp-content%2Fuploads%2F2022%2F11%2Fburger_carne_incri%CC%81vel.png&w=1920&q=75',
+      'https://catracalivre.com.br/wp-content/uploads/2022/03/img-8977.jpg',
       [
-        new Ingredient('Buns', 2),
-        new Ingredient('Meat', 1),
-        new Ingredient('cheese', 1),
+        new Ingredient('Limao', 2),
+        new Ingredient('ovo', 12)
       ]
     ),
   ];
@@ -38,4 +40,20 @@ export class RecipeService {
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.slService.addIngredients(ingredients);
   }
+
+  addRecipe(recipe: Recipe) {
+    this.recipes.push(recipe);
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
+  updateRecipe(index: number, recipe: Recipe) {
+    this.recipes[index] = recipe;
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
+  deleteRecipe(index: number) {
+    this.recipes.splice(index, 1);
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
 }
