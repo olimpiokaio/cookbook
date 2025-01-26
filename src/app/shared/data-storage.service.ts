@@ -28,7 +28,6 @@ export class DataStorageService {
   }
 
   fetchRecipes() {
-
     return this.http.get<Recipe[]>(
           'https://ng-recipe-book-e2992-default-rtdb.firebaseio.com/recipes.json'
       )
