@@ -26,7 +26,7 @@ import { RecipesModule } from './recipes/recipes.module';
     AuthComponent,
     LoadingSpinnerComponent,
     AlertComponent,
-    PlaceholderDirective,
+    PlaceholderDirective
   ],
   imports: [
     BrowserModule,
@@ -34,7 +34,7 @@ import { RecipesModule } from './recipes/recipes.module';
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    RecipesModule
+    RecipesModule,
   ],
   providers: [
     ShoppingListService,
@@ -45,6 +45,6 @@ import { RecipesModule } from './recipes/recipes.module';
       multi: true,
     },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
