@@ -1,8 +1,8 @@
 <div class="row">
   <div class="col-xs-12">
     <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
-      <div class="row">
-        <div class="col-xs-12">
+      <div class="row form-container">
+        <div class="col-xs-12 container-buttons">
           <button
             type="submit"
             class="btn btn-success"
@@ -13,7 +13,25 @@
             (click)="onCancel()">Cancel</button>
         </div>
       </div>
-      <div class="row">
+      <div class="row form-container">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <div class="radio">
+              <label>
+                <input type="radio" id="optionsTrue" formControlName="free" value="true" />
+                The first option is this: share your recipe and let the world have fun
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" id="optionsFalse" formControlName="free" value="false" />
+                The second option is this: leave this recipe private, only I can consult it
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row form-container">
         <div class="col-xs-12">
           <div class="form-group">
             <label for="name">Name</label>
@@ -25,7 +43,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row form-container">
         <div class="col-xs-12">
           <div class="form-group">
             <label for="imagePath">Image URL</label>
@@ -38,15 +56,28 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row form-container">
         <div class="col-xs-12">
           <img [src]="imagePath.value" alt="" class="img-responsive" />
         </div>
       </div>
-      <div class="row">
+      <div class="row form-container">
         <div class="col-xs-12">
           <div class="form-group">
-            <label for="description">Description</label>
+            <label for="presentation">Presentation</label>
+            <textarea
+              type="text"
+              id="presentation"
+              class="form-control"
+              formControlName="presentation"
+              rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row form-container">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="description">Description / Step by step to do this</label>
             <textarea
               type="text"
               id="description"

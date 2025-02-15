@@ -1,0 +1,41 @@
+.content-log__cookbook {
+  background-image: url('./../shared/baking-8460297_1280.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 91vh;
+  background-size: cover;
+}
+
+
+.content-auth {
+  margin-left: 0.8%;
+}
+
+.container-title {
+  color: #10162f;
+  text-align: center;
+  margin-top: 28%;
+  margin-bottom: 14%;
+  border: 4px dashed #ffdac0;
+}
+
+.container-buttons button {
+  background-color: #10162f;
+  border: #10162f9c;
+  font-weight: 600;
+}
+
+input {
+  color: #10162f;
+  background-color: #ffdac0;
+  border: transparent;
+  box-shadow: inset 1px 1px 1px 1px #58585821;
+  border: 1 solid #10162f;
+}
+
+input:focus {
+  background-color: #ffc297;
+  border: transparent;
+  box-shadow: 1px 1px 5px 1px #10162f5d;
+  border: 2px dashed #ffdac0;
+}

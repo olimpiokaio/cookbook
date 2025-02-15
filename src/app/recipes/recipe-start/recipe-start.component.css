@@ -1,0 +1,22 @@
+.content-message__info {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-top: 20%;
+}
+
+.content-message__info h3 {
+  font-weight: 600;
+  font-size: 28px;
+  color: #10162f;
+}
+
+.content-image__info {
+  height: 250px;
+  width: 250px;
+  background-image: url('../../shared/cozinheiroChefinho.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+}

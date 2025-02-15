@@ -1,0 +1,23 @@
+.navbar {
+  background-color: #fff0e5;
+  background-image: linear-gradient(to left, #fff0e5, rgb(228, 228, 228));
+  padding: 14px 0;
+  border-bottom: dashed 4px #fff0e5;
+}
+
+.navbar-brand {
+  font-family: 'kanit-black', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  font-style: normal;
+  /* color: #ffd300; */
+  color: white;
+  background-color: #10162f;
+}
+
+a {
+  font-family: 'kanit-black', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  font-style: normal;
+}

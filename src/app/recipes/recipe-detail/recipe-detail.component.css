@@ -1,0 +1,61 @@
+.container-button-detail {
+  padding: 0 4px;
+}
+
+.content-access__info {
+  text-align: center;
+  display: inline-block;
+  padding: 7px;
+  background-color: #ffd300;
+  color: #10162f;
+  border-radius: 8px;
+  margin-right: 2%;
+  font-weight: 600;
+}
+
+.free {
+  background-color: #ffd300;
+}
+
+.private {
+  background-color: #10162f;
+  color: white;
+}
+
+.content-menu__dropdown {
+  display: inline-block;
+}
+
+.container-detail__dropdown button,
+.container-detail__dropdown button:focus {
+  background-color: white;
+  color: #10162f;
+  border: #10162f 2px solid;
+  display: inline-block;
+}
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.recipe-name {
+  text-align: center;
+  border-bottom: #10162f ridge 1px;
+  margin-bottom: 4%;
+}
+
+.recipe-presentation {
+  color: #10162f;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.btn-group button {
+  font-weight: 600;
+}
+
+.btn-group a {
+  font-weight: 600;
+}

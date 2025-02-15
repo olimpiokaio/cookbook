@@ -1,0 +1,27 @@
+
+.list-group-item {
+  margin: 14px 0;
+  border: #10162f 1px solid;
+  color: #10162f;
+}
+
+.list-group-item:hover,
+.list-group-item:active,
+.list-group-item:focus {
+  color: #10162f;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.active,
+.active:hover,
+.active:focus {
+  background-color: #ffd300;
+  box-shadow: -8px 8px 0px 0px #272727;
+  border-color: #10162f;
+  transform: translate(6px, -6px);
+}
+
+.list-group-item:hover {
+  transform: translate(6px, -6px);
+  box-shadow: -8px 8px 0px 0px #272727;
+}

@@ -3,3 +3,16 @@ input.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched {
   border: 1px solid salmon;
 }
+
+.form-container {
+  margin-top: 23px;
+}
+
+.container-buttons .btn {
+  margin-right: 8px;
+}
+
+.btn {
+  font-weight: 600;
+  border: 1px solid #10162f;
+}
