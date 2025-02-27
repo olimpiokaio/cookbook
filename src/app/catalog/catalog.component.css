@@ -1,0 +1,12 @@
+.content-catalog__main {
+  height: 100vh;
+}
+
+.title {
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  margin-top: 4%;
+  font-size: 30px;
+  text-align: center;
+  color: #10162f;
+}

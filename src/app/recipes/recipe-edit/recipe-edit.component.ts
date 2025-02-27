@@ -34,7 +34,7 @@ export class RecipeEditComponent implements OnInit {
     let recipePresentation = '';
     let recipeDescription = '';
     let recipeIngredients = new FormArray([]);
-    let recipeFree = true;
+    let recipeFree;
 
     if (this.editMode) {
       const recipe = this.recipeService.getRecipe(this.id);

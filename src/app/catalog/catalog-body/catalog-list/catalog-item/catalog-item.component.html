@@ -1,0 +1,14 @@
+<div class="content-item">
+  <div class="item-body">
+    <img [src]="recipe.imagePath" alt="recipe" />
+  </div>
+  <div class="item-footer">
+    <div>
+      <p>{{ recipe.description| truncate }}</p>
+      <p class="item_user_name">400 <i class="fa-solid fa-heart"></i> By User namespace</p>
+    </div>
+  </div>
+  <div class="content_like">
+    <a><i class="fa-regular fa-heart"></i></a>
+  </div>
+</div>

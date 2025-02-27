@@ -10,12 +10,13 @@ import { RecipesModule } from './recipes/recipes.module';
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core-module';
+import { CatalogMudule } from './catalog/catalog.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent
-  ],
+],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
@@ -23,6 +24,7 @@ import { CoreModule } from './core-module';
     HttpClientModule,
     RecipesModule,
     ShoppingListModule,
+    CatalogMudule,
     SharedModule,
     CoreModule
   ],

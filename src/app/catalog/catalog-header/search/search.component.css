@@ -1,0 +1,22 @@
+.content-search__main {
+  /* border: 1px solid #ff0000; */
+  margin-top: 1%;
+  padding: 20px 0;
+  font-family: "Montserrat", serif;
+}
+
+.content-search input {
+  width: 50%;
+  margin: auto;
+  padding: 24px 0;
+  box-shadow: inset 1px 1px 1px 1px #58585821;
+  border: 2px solid #10162f38;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.content-search input:focus {
+  box-shadow: 1px 1px 5px 1px #10162f5d;
+  border: 2px dashed #ffdac0;
+}
