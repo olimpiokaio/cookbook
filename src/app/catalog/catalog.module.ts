@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule, inject } from "@angular/core";
 import { CatalogComponent } from './catalog.component';
 import { SharedModule } from "../shared/shared.module";
 import { RouterModule } from "@angular/router";
@@ -8,6 +8,7 @@ import { SearchComponent } from './catalog-header/search/search.component';
 import { CatalogListComponent } from "./catalog-body/catalog-list/catalog-list.component";
 import { TrucatePipe } from "../shared/truncate.pipe";
 import { CatalogItem } from "./catalog-body/catalog-list/catalog-item/catalog-item.component";
+import { RecipeDetailComponent } from "../recipes/recipe-detail/recipe-detail.component";
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { CatalogItem } from "./catalog-body/catalog-list/catalog-item/catalog-it
     SearchComponent,
     CatalogListComponent,
     CatalogItem,
-    TrucatePipe
+    TrucatePipe,
   ],
   imports: [
     SharedModule,
@@ -26,6 +27,10 @@ import { CatalogItem } from "./catalog-body/catalog-list/catalog-item/catalog-it
         path: '',
         component: CatalogComponent,
         canActivate: [AuthGuard],
+      },
+      {
+        path: ':id',
+        component: RecipeDetailComponent
       },
     ]),
   ],

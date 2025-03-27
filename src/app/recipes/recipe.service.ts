@@ -9,24 +9,6 @@ export class RecipeService {
 
   recipesChanged = new Subject<Recipe[]>();
 
-  // private recipes: Recipe[] = [
-  //   new Recipe(
-  //     'Camarao ao molho branco',
-  //     'This is simply a test',
-  //     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUlCPfHnxXHC0PNSewiUtEFbeKLe76L_bIoPFzI8JQnUwOslGah-T01B9mOWOAIjiyo_k&usqp=CAU',
-  //     [new Ingredient('Shrimp', 20), new Ingredient('Vegetable', 4)]
-  //   ),
-  //   new Recipe(
-  //     'Torta de limao',
-  //     'This is simply a test',
-  //     'https://catracalivre.com.br/wp-content/uploads/2022/03/img-8977.jpg',
-  //     [
-  //       new Ingredient('Limao', 2),
-  //       new Ingredient('ovo', 12)
-  //     ]
-  //   ),
-  // ];
-
   private recipes: Recipe[] = [];
 
   constructor(private slService: ShoppingListService) {}

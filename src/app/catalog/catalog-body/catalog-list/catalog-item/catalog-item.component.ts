@@ -1,7 +1,6 @@
 import { Component, Input } from "@angular/core";
 import { Recipe } from "../../../../recipes/recipe.model";
 
-
 @Component({
   selector: 'app-catalog-item',
   templateUrl: './catalog-item.component.html',
@@ -10,5 +9,6 @@ import { Recipe } from "../../../../recipes/recipe.model";
 export class CatalogItem {
 
   @Input() recipe: Recipe;
+  @Input() index: number;
 
 }

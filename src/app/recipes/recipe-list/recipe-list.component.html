@@ -4,7 +4,11 @@
     </div>
 </div>
 <hr/>
-<div class="row">
+<div class="content-searching">
+  <p>Recipe</p>
+  <input type="text" id="searching-recipe" placeholder="Search name..."/>
+</div>
+<div class="row list-recipes">
     <div class="col-xs-12">
         <app-recipe-item
             *ngFor="let recipeEl of recipes; let i = index"

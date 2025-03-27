@@ -5,11 +5,12 @@
 .content-access__info {
   text-align: center;
   display: inline-block;
+  width: 8rem;
   padding: 7px;
   background-color: #ffd300;
   color: #10162f;
   border-radius: 8px;
-  margin-right: 2%;
+  margin-right: 8px;
   font-weight: 600;
 }
 
@@ -58,4 +59,11 @@
 
 .btn-group a {
   font-weight: 600;
+}
+
+.content-acess__info {
+  height: 2rem;
+  display: block;
+  width: 100%;
+  border: 1px solid black;
 }

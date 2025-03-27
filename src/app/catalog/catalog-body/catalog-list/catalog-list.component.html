@@ -2,7 +2,8 @@
   <div class="content-items col-xs-12">
 
     <app-catalog-item
-      *ngFor="let itemRecipe of recipes"
+      *ngFor="let itemRecipe of recipes; let i = index"
+      [index]="i"
       [recipe]="itemRecipe">
     </app-catalog-item>
 

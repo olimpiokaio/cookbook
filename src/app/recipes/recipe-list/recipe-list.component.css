@@ -2,3 +2,37 @@
   font-weight: 600;
   border: 1px solid #10162f;
 }
+
+.content-searching {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.content-searching p {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.content-searching #searching-recipe {
+  display: inline-block;
+  font: inherit;
+  width: 90%;
+  border: 2px solid #10162f18;
+  padding: 0.5rem 2rem;
+  background-color: transparent;
+  border-radius: 4rem;
+  outline: none;
+}
+
+.content-searching #searching-recipe:hover,
+.content-searching #searching-recipe:focus {
+  border-color: #10162f;
+  /* transform: translate(4px, -4px); */
+}
+
+.list-recipes {
+  /* border: 1px solid rgba(0, 0, 0, 0.349); */
+  overflow: auto;
+  height: 75vh;
+  margin-bottom: 1rem;
+}

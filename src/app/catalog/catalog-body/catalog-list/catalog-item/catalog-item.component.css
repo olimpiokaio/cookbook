@@ -9,6 +9,7 @@
   display: inline-block;
   height: 298px;
   width: 28%;
+  min-width: 250px;
   margin: 0px 1.6% 12%;
   border-radius: 20px;
   background-color: white;
@@ -62,7 +63,6 @@
   position: relative;
   top: -20px;
   height: 36%;
-  overflow: hidden;
 }
 
 .item-footer i {
@@ -70,9 +70,19 @@
   color: #ff00005d;
 }
 
+.item-footer h5 {
+  color: #10162f;
+  font-weight: 600;
+  font-size: 1.8rem;
+  position: relative;
+  top: -10px;
+}
+
 .content_like i {
   font-size: 28px;
   color: #00000050;
+  position: relative;
+  top: -0.7rem;
 }
 
 .content_like i:hover {
