@@ -4,17 +4,25 @@
   background-position: center;
   height: 91vh;
   background-size: cover;
+  display: inline-block;
 }
 
-
 .content-auth {
-  margin-left: 0.8%;
+  display: inline-block;
+  height: 91vh;
+  min-width: 27rem;
+}
+
+.content-auth .content-login {
+  padding-top: 14rem;
+  width: 40%;
+  margin: auto;
 }
 
 .container-title {
   color: #10162f;
   text-align: center;
-  margin-top: 28%;
+  margin-top: 4rem;
   margin-bottom: 14%;
   border: 4px dashed #ffdac0;
 }
@@ -38,4 +46,63 @@ input:focus {
   border: transparent;
   box-shadow: 1px 1px 5px 1px #10162f5d;
   border: 2px dashed #ffdac0;
+}
+
+@media (max-width: 1479px) {
+  .content-auth .content-login {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1029px) {
+  .content-auth .content-login {
+    width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  .content-log__cookbook {
+      position: absolute;
+      left: 0px;
+      width: 100%;
+      z-index: 0;
+    }
+
+  .content-auth {
+    width: 100%;
+    position: absolute;
+    background-color: #ffc2978f;
+    left: 0px;
+    z-index: 1;
+  }
+
+  .content-auth .content-login {
+    padding-top: 4rem;
+  }
+
+  .content-auth .container-title {
+    background-color: #ffc297e8;
+    box-shadow: #10162f 2px 2px 8px;
+  }
+
+  form .form-group {
+    width: 70%;
+    margin: auto auto 1.4rem;
+  }
+
+  input {
+    border: 2px solid #10162f;
+  }
+
+  .container-buttons {
+    margin: 4rem auto;
+    width: 70%;
+  }
+
+  button,
+  button:disabled {
+    box-shadow: #10162f 2px 2px 8px;
+    margin-bottom: 2rem;
+  }
+
 }

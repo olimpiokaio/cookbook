@@ -17,22 +17,22 @@
   display: inline-block;
   font: inherit;
   width: 90%;
-  border: 2px solid #10162f18;
-  padding: 0.5rem 2rem;
+  border: 2px solid #10162f5b;
+  padding: 1.5rem 2rem;
   background-color: transparent;
   border-radius: 4rem;
   outline: none;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.content-searching #searching-recipe:hover,
+.content-searching #searching-recipe:active,
 .content-searching #searching-recipe:focus {
-  border-color: #10162f;
-  /* transform: translate(4px, -4px); */
+  border: 2px solid #10162f;
+  transform: translate(4px, -4px);
+  box-shadow: -4px 4px 0px 0px #272727;
 }
 
 .list-recipes {
   /* border: 1px solid rgba(0, 0, 0, 0.349); */
-  overflow: auto;
-  height: 75vh;
   margin-bottom: 1rem;
 }

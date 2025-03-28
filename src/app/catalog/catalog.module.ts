@@ -1,4 +1,4 @@
-import { NgModule, inject } from "@angular/core";
+import { NgModule } from "@angular/core";
 import { CatalogComponent } from './catalog.component';
 import { SharedModule } from "../shared/shared.module";
 import { RouterModule } from "@angular/router";
@@ -8,7 +8,8 @@ import { SearchComponent } from './catalog-header/search/search.component';
 import { CatalogListComponent } from "./catalog-body/catalog-list/catalog-list.component";
 import { TrucatePipe } from "../shared/truncate.pipe";
 import { CatalogItem } from "./catalog-body/catalog-list/catalog-item/catalog-item.component";
-import { RecipeDetailComponent } from "../recipes/recipe-detail/recipe-detail.component";
+import { CatalogDetail } from "./catalog-detail/catalog-detail.component";
+import { CommonModule } from "@angular/common";
 
 
 @NgModule({
@@ -18,9 +19,11 @@ import { RecipeDetailComponent } from "../recipes/recipe-detail/recipe-detail.co
     SearchComponent,
     CatalogListComponent,
     CatalogItem,
-    TrucatePipe,
+    CatalogDetail,
+    TrucatePipe
   ],
   imports: [
+    CommonModule,
     SharedModule,
     RouterModule.forChild([
       {
@@ -30,7 +33,7 @@ import { RecipeDetailComponent } from "../recipes/recipe-detail/recipe-detail.co
       },
       {
         path: ':id',
-        component: RecipeDetailComponent
+        component: CatalogDetail,
       },
     ]),
   ],

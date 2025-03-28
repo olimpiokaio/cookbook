@@ -2,3 +2,13 @@
   padding-top: 28px;
   height: 100vh;
 }
+
+.content-main {
+margin: auto;
+}
+
+@media (min-width: 40rem) {
+  .content-main {
+      width: 54rem;
+    }
+}

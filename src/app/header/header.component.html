@@ -9,16 +9,16 @@
           <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
             <ul class="nav navbar-nav">
                 <li *ngIf="isAuthenticated">
-                  <a routerLinkActive="active" routerLink="/recipes">Recipes</a>
+                  <a routerLinkActive="active" routerLink="/recipes" (click)="collapsed = true">Recipes</a>
                 </li>
                 <li *ngIf="!isAuthenticated">
-                  <a routerLinkActive="active" routerLink="/auth" >Authenticate</a>
+                  <a routerLinkActive="active" routerLink="/auth" (click)="collapsed = true">Authenticate</a>
                 </li>
                 <!-- <li *ngIf="isAuthenticated">
                   <a routerLinkActive="active" routerLink="/shopping-list" >Shopping List</a>
                 </li> -->
                 <li *ngIf="isAuthenticated">
-                  <a routerLinkActive="active" routerLink="/catalog" >Catalog</a>
+                  <a routerLinkActive="active" routerLink="/catalog" (click)="collapsed = true">Catalog</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -28,8 +28,8 @@
                 <li class="dropdown" appDropdown *ngIf="isAuthenticated">
                     <a style="cursor: pointer;" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a style="cursor: pointer;" (click)="onSaveData()">Save Data</a></li>
-                        <li><a style="cursor: pointer;" (click)="onFetchData()">Fetch Date</a></li>
+                        <li><a style="cursor: pointer;" (click)="onSaveData(); collapsed = true">Save Data</a></li>
+                        <li><a style="cursor: pointer;" (click)="onFetchData(); collapsed = true">Fetch Date</a></li>
                     </ul>
                 </li>
             </ul>

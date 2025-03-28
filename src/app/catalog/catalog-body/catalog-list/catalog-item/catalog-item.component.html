@@ -1,8 +1,8 @@
-<div class="content-item" [routerLink]="[index]" routerLinkActive="active" >
-  <div class="item-body">
+<div class="content-item" >
+  <div class="item-body" [routerLink]="[index]" routerLinkActive="active">
     <img [src]="recipe.imagePath" alt="recipe" />
   </div>
-  <div class="item-footer">
+  <div class="item-footer" [routerLink]="[index]" routerLinkActive="active">
     <div>
       <h5>{{ recipe.name }}</h5>
       <p>{{ recipe.description| truncate }}</p>
@@ -10,6 +10,8 @@
     </div>
   </div>
   <div class="content_like">
+    <a><i class="fa-regular fa-comment"></i></a>
     <a><i class="fa-regular fa-heart"></i></a>
+    <!-- <a><i class="fa-solid fa-circle-play"></i></a> -->
   </div>
 </div>
