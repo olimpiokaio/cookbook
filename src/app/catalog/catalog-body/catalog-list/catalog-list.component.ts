@@ -2,6 +2,7 @@ import { Component, Input, OnDestroy, OnInit } from "@angular/core";
 import { Recipe } from "../../../recipes/recipe.model";
 import { RecipeService } from "../../../recipes/recipe.service";
 import { Subscription } from "rxjs";
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-catalog-list',
@@ -10,6 +11,7 @@ import { Subscription } from "rxjs";
 })
 export class CatalogListComponent implements OnInit, OnDestroy {
 
+  private scrollPosition = 0;
   recipes: Recipe[] = [];
   subscription: Subscription;
 
@@ -28,5 +30,4 @@ export class CatalogListComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }
-
 }

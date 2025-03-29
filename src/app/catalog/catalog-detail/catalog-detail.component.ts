@@ -1,21 +1,23 @@
 import { Component, OnInit } from "@angular/core";
 import { Recipe } from "../../recipes/recipe.model";
 import { RecipeService } from "../../recipes/recipe.service";
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-catalog-detail',
   templateUrl: './catalog-detail.component.html',
-  styleUrl: './catalog-detail.component.html',
+  styleUrl: './catalog-detail.component.css',
 })
 export class CatalogDetail implements OnInit {
-  
   recipe: Recipe;
   id: number;
 
   constructor(
     private recipeService: RecipeService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private location: Location
+    // private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -25,4 +27,7 @@ export class CatalogDetail implements OnInit {
     });
   }
 
+  onBackLink() {
+    this.location.back();
+  }
 }

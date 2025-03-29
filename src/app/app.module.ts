@@ -13,10 +13,7 @@ import { CoreModule } from './core-module';
 import { CatalogMudule } from './catalog/catalog.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent
-],
+  declarations: [AppComponent, HeaderComponent],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
@@ -29,6 +26,6 @@ import { CatalogMudule } from './catalog/catalog.module';
     CoreModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

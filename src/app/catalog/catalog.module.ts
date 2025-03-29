@@ -20,7 +20,7 @@ import { CommonModule } from "@angular/common";
     CatalogListComponent,
     CatalogItem,
     CatalogDetail,
-    TrucatePipe
+    TrucatePipe,
   ],
   imports: [
     CommonModule,
@@ -35,7 +35,7 @@ import { CommonModule } from "@angular/common";
         path: ':id',
         component: CatalogDetail,
       },
-    ]),
-  ],
+    ])
+  ]
 })
 export class CatalogMudule {}
