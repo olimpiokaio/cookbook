@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Recipe } from "../../recipes/recipe.model";
 import { RecipeService } from "../../recipes/recipe.service";
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
@@ -17,7 +17,6 @@ export class CatalogDetail implements OnInit {
     private recipeService: RecipeService,
     private route: ActivatedRoute,
     private location: Location
-    // private router: Router,
   ) {}
 
   ngOnInit(): void {

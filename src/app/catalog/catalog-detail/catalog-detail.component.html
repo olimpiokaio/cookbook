@@ -24,14 +24,16 @@
   </div>
 
   <div class="content-description">
+      <h4>Modo de preparo</h4>
       <div>
           <pre>{{recipe.description}}</pre>
       </div>
   </div>
 
   <div class="container-ingredients">
-    <ul class="ingredients-list">
-      <li class="ingredients-item" *ngFor="let ingredient of recipe.ingredients">
+    <h4>Ingredients</h4>
+    <ul class="ingredients-list list-group">
+      <li class="ingredients-item list-group-item" *ngFor="let ingredient of recipe.ingredients">
         {{ ingredient.name ? ingredient.name : '-' }}
       </li>
     </ul>
