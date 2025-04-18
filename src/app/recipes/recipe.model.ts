@@ -7,6 +7,8 @@ export class Recipe {
   public imagePath: string;
   public free: boolean;
   public ingredients: Ingredient[];
+  public likes: number;
+  public creator: string;
 
   constructor(
     name: string,
@@ -14,13 +16,17 @@ export class Recipe {
     desc: string,
     imagePath: string,
     free: boolean,
-    ingredients: Ingredient[]
+    ingredients: Ingredient[],
+    likes: number,
+    creator: string
   ) {
     this.name = name;
-    this.presentation = presentation
+    this.presentation = presentation;
     this.description = desc;
     this.imagePath = imagePath;
     this.free = free;
     this.ingredients = ingredients;
+    this.likes = likes;
+    this.creator = creator;
   }
 }

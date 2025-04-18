@@ -1,8 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from "@angular/core";
-import { Recipe } from "../../../recipes/recipe.model";
-import { RecipeService } from "../../../recipes/recipe.service";
+import { Recipe } from "../../recipes/recipe.model";
+import { RecipeService } from "../../recipes/recipe.service";
 import { Subscription } from "rxjs";
-import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-catalog-list',
@@ -10,12 +9,14 @@ import { ViewportScroller } from '@angular/common';
   styleUrl: './catalog-list.component.css',
 })
 export class CatalogListComponent implements OnInit, OnDestroy {
-
   private scrollPosition = 0;
   recipes: Recipe[] = [];
   subscription: Subscription;
+  recipesExp: Recipe[] = [];
 
-  constructor(private recipeService: RecipeService) {}
+  constructor(
+    private recipeService: RecipeService,
+  ) {}
 
   ngOnInit(): void {
     this.recipes = this.recipeService.getRecipes();

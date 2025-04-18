@@ -11,8 +11,6 @@ import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core-module';
 import { CatalogMudule } from './catalog/catalog.module';
-import { ProfileComponent } from './profile/profile.component';
-import { ProfileModule } from './profile/profile.module';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
@@ -23,7 +21,6 @@ import { ProfileModule } from './profile/profile.module';
     HttpClientModule,
     RecipesModule,
     ShoppingListModule,
-    ProfileModule,
     CatalogMudule,
     SharedModule,
     CoreModule

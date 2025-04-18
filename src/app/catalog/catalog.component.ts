@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   styleUrl: './catalog.component.css',
 })
 export class CatalogComponent implements OnInit, OnDestroy {
-  
+
   subscription: Subscription;
 
   constructor(private dataStorageService: DataStorageService) {}

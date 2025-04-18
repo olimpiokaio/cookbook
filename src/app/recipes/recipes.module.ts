@@ -19,7 +19,7 @@ import { SharedModule } from "../shared/shared.module";
     RecipeListComponent,
     RecipeItemComponent,
     RecipeStartComponent,
-    RecipeEditComponent,
+    RecipeEditComponent
   ],
   exports: [DropdownDirective],
   imports: [
@@ -28,6 +28,6 @@ import { SharedModule } from "../shared/shared.module";
     ReactiveFormsModule,
     RecipesRoutingModule,
     SharedModule
-  ]
+  ],
 })
 export class RecipesModule {}

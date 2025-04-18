@@ -3,16 +3,22 @@
   margin-top: 1%;
   padding: 20px 0;
   font-family: "Montserrat", serif;
+
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .content-search input {
-  width: 80%;
-  margin: auto;
-  padding: 2rem 2rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+
+  display: inline-block;
+  font: inherit;
+  width: 90%;
   border: 2px solid #10162f5b;
-  border-radius: 20px;
-  font-weight: 600;
+  padding: 1.5rem 2rem;
   background-color: transparent;
+  border-radius: 4rem;
   outline: none;
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 }

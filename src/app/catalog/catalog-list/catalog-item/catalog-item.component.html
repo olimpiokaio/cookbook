@@ -6,11 +6,11 @@
     <div>
       <h5 [routerLink]="[index]" routerLinkActive="active">{{ recipe.name }}</h5>
       <p [routerLink]="[index]" routerLinkActive="active">{{ recipe.description| truncate }}</p>
-      <span>400 <i class="fa-solid fa-heart"></i></span>
+      <span>{{recipe.likes}} <i class="fa-solid fa-heart"></i></span>
       <span
         class="item_user_name"
         routerLInkActive="active" [routerLink]="linkProfile"
-        >Olimpio Kaio
+        >{{recipe.creator}}
       </span>
     </div>
   </div>
@@ -18,6 +18,5 @@
   <div class="content_like">
     <a><i class="fa-regular fa-comment"></i></a>
     <a><i class="fa-regular fa-heart"></i></a>
-    <!-- <a><i class="fa-solid fa-circle-play"></i></a> -->
   </div>
 </div>
