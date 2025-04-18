@@ -10,7 +10,7 @@
       <span
         class="item_user_name"
         routerLInkActive="active" [routerLink]="linkProfile"
-        >{{recipe.creator}}
+        >{{recipe.creator | truncate:16}}
       </span>
     </div>
   </div>

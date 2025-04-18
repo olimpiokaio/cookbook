@@ -3,6 +3,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { RecipeService } from '../recipe.service';
 import { Recipe } from '../recipe.model';
+import { User } from '../../auth/user.model';
 
 @Component({
   selector: 'app-recipe-edit',
@@ -13,6 +14,7 @@ export class RecipeEditComponent implements OnInit {
   id: number;
   editMode = false;
   recipeForm: FormGroup;
+  user: User;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,12 +31,17 @@ export class RecipeEditComponent implements OnInit {
   }
 
   private initForm() {
+
+    this.user = JSON.parse(localStorage.getItem('userData'));
+
     let recipeName = '';
     let recipeImagePath = '';
     let recipePresentation = '';
     let recipeDescription = '';
     let recipeIngredients = new FormArray([]);
     let recipeFree;
+    let recipeLikes = 0;
+    let recipeCreator = this.user.email !== null ? this.user.email.split('@')[0] : 'User CookBook';
 
     if (this.editMode) {
       const recipe = this.recipeService.getRecipe(this.id);
@@ -43,6 +50,9 @@ export class RecipeEditComponent implements OnInit {
       recipeImagePath = recipe.imagePath;
       recipeDescription = recipe.description;
       recipeFree = recipe.free;
+      recipeLikes = recipe.likes;
+      recipeCreator = recipe.creator;
+
       if (recipe['ingredients']) {
         for (let ingredient of recipe.ingredients) {
           recipeIngredients.push(
@@ -65,6 +75,8 @@ export class RecipeEditComponent implements OnInit {
       description: new FormControl(recipeDescription, Validators.required),
       free: new FormControl(recipeFree, Validators.required),
       ingredients: recipeIngredients,
+      likes: new FormControl(recipeLikes, Validators.required),
+      creator: new FormControl(recipeCreator, Validators.required)
     });
   }
 
@@ -108,5 +120,4 @@ export class RecipeEditComponent implements OnInit {
   onCancel() {
     this.router.navigate(['../'], { relativeTo: this.route });
   }
-
 }

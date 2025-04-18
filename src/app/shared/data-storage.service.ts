@@ -8,6 +8,7 @@ import { AuthService } from "../auth/auth.service";
 
 @Injectable({ providedIn: 'root' })
 export class DataStorageService {
+  
   constructor(
     private http: HttpClient,
     private recipeService: RecipeService,
@@ -22,7 +23,7 @@ export class DataStorageService {
         recipes
       )
       .subscribe((response) => {
-        console.log(response);
+        //console.log(response);
       });
   }
 
