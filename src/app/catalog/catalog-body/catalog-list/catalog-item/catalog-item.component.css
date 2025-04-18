@@ -50,6 +50,7 @@
   margin: 18px 4px;
   text-align: right;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .item-footer {

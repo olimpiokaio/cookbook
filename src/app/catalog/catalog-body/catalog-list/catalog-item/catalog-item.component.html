@@ -2,13 +2,19 @@
   <div class="item-body" [routerLink]="[index]" routerLinkActive="active">
     <img [src]="recipe.imagePath" alt="recipe" />
   </div>
-  <div class="item-footer" [routerLink]="[index]" routerLinkActive="active">
+  <div class="item-footer">
     <div>
-      <h5>{{ recipe.name }}</h5>
-      <p>{{ recipe.description| truncate }}</p>
-      <p class="item_user_name">400 <i class="fa-solid fa-heart"></i> By User namespace</p>
+      <h5 [routerLink]="[index]" routerLinkActive="active">{{ recipe.name }}</h5>
+      <p [routerLink]="[index]" routerLinkActive="active">{{ recipe.description| truncate }}</p>
+      <span>400 <i class="fa-solid fa-heart"></i></span>
+      <span
+        class="item_user_name"
+        routerLInkActive="active" [routerLink]="linkProfile"
+        >Olimpio Kaio
+      </span>
     </div>
   </div>
+  <br/>
   <div class="content_like">
     <a><i class="fa-regular fa-comment"></i></a>
     <a><i class="fa-regular fa-heart"></i></a>
